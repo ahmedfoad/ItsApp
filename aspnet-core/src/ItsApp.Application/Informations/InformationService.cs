@@ -28,12 +28,14 @@ namespace ItsApp.Informations
         [HttpGet]
         public async Task<List<int>> GetStepIndexListAsync()
         {
+            Logger.Info("GetStepIndexListAsync is starting ...");
             return await _informationRepository.GetStepIndexListAsync();
         }
 
         [HttpGet]
         public async Task<List<InformationDto>> GetByStepIndexAsync(int stepIndex)
         {
+            Logger.Info("GetByStepIndexAsync is starting ...");
             var informations = await _informationRepository.GetByStepIndexAsync(stepIndex);
             return _objectMapper.Map<List<InformationDto>>(informations);
         }
@@ -41,12 +43,14 @@ namespace ItsApp.Informations
         [HttpPut]
         public async Task<int> CreateOrUpdateAsync(InformationDto informationDto)
         {
+            Logger.Info("CreateOrUpdateAsync is starting ...");
             var information = _objectMapper.Map<Information>(informationDto);
             return await _informationRepository.CreateOrUpdateAsync(information);
         }
 
         public async Task<InformationDto> GetAsync(int id)
         {
+            Logger.Info("GetAsync is starting ...");
             var information = await _informationRepository.GetAsync(id);
             return _objectMapper.Map<InformationDto>(information);
         }
@@ -54,12 +58,14 @@ namespace ItsApp.Informations
         [HttpDelete]
         public async Task DeleteAsync(int id)
         {
+            Logger.Info("DeleteAsync is starting ...");
             await _informationRepository.DeleteAsync(id);
         }
 
         [HttpDelete]
         public async Task DeleteByStepIndexAsync(int stepIndex)
         {
+            Logger.Info("DeleteByStepIndexAsync is starting ...");
             await _informationRepository.DeleteByStepIndexAsync(stepIndex);
         }
     }

@@ -71,7 +71,11 @@ namespace ItsApp.Web.Host.Startup
             }
 
             // Set auth token from cookie
-            context.Token = SimpleStringCipher.Instance.Decrypt(qsAuthToken, AppConsts.DefaultPassPhrase);
+            if (qsAuthToken != "null")
+            {
+                context.Token = SimpleStringCipher.Instance.Decrypt(qsAuthToken, AppConsts.DefaultPassPhrase);
+            }
+
             return Task.CompletedTask;
         }
     }

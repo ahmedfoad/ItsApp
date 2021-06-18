@@ -1,0 +1,59 @@
+<div [@routerTransition]>
+  <section class="content-header">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-6">
+          <h1>{{ "informations" | localize }}</h1>
+        </div>
+        <div class="col-12 text-center">
+          <a href="javascript:;" class="btn bg-gray margin5"> Step 1 </a>
+
+          <span *ngFor='let step of Steps; index as i'>
+            <a  *ngIf="step != 1" href="javascript:;" class="btn bg-red margin5" (click)="removeStep(i)">
+              Step {{step}}
+              <i class="fa fa-minus-square"></i>
+            </a>
+          </span>
+
+          <a href="javascript:;" class="btn bg-blue margin5" (click)="newStep()">
+            <i class="fa fa-plus-square"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content px-2">
+    <div class="container-fluid">
+      <div class="card">
+        <div class="card-body">
+        <div class="col-12 text-right">
+          <a href="javascript:;"
+            class="btn bg-blue"
+            (click)="createInformation()">
+            <i class="fa fa-plus-square"></i>
+            {{ "Create" | localize }}
+          </a>
+        </div>
+        </div>
+        <div class="card-body"><b>Step {{cuttentStepValue}}</b></div>
+        <div class="card-body" *ngFor='let item of informationList'>
+          <a href="javascript:;" class="btn bg-red margin5" (click)="deleteItem(item)">
+            item {{item.id}}
+            <i class="fa fa-minus-square"></i>
+          </a>
+          <hr class="hrRow">
+          <div class="card-body" (click)="editInformation(item)">
+            <p>Title : {{item.title}}</p>
+          <p>Discription : {{item.description}}</p>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <div class="col-12 text-center">
+      <a href="javascript:;" class="btn bg-blue margin5" (click)="previous()"> Previous </a>
+      <a href="javascript:;" class="btn bg-blue margin5" (click)="next()"> Next </a>
+    </div>
+  </section>
+</div>

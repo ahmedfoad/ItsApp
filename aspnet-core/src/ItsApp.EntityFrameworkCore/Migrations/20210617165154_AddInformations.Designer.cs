@@ -4,14 +4,16 @@ using ItsApp.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ItsApp.Migrations
 {
     [DbContext(typeof(ItsAppDbContext))]
-    partial class ItsAppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210617165154_AddInformations")]
+    partial class AddInformations
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

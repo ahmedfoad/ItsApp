@@ -250,12 +250,12 @@
   resolved "https://registry.yarnpkg.com/@angular/core/-/core-9.0.0.tgz#227dc53e1ac81824f998c6e76000b7efc522641e"
   integrity sha512-6Pxgsrf0qF9iFFqmIcWmjJGkkCaCm6V5QNnxMy2KloO3SDq6QuMVRbN9RtC8Urmo25LP+eZ6ZgYqFYpdD8Hd9w==
 
-"@angular/core@^11.0.2":
-  version "11.0.2"
-  resolved "https://registry.npmjs.org/@angular/core/-/core-11.0.2.tgz"
-  integrity sha512-GyDebks5ZPHDyChDW3VvzJq00Ct0iuesNpb9z/GpKtOXqug3sGr4KgkFDUTbfizKPWyeoaLH9FQYP55215nCKQ==
+"@angular/core@^20.3.27":
+  version "20.3.27"
+  resolved "https://registry.yarnpkg.com/@angular/core/-/core-20.3.27.tgz#97ce97a90c3e06564df7d7d8abbb2eeac3afdb07"
+  integrity sha512-8EfYIUST5CKldOF4MAYWTFFRB7EtwqUoQBZdar6US39/EEzWm/wm/iRNkH2jmKe4YuPa2GoeHS1WQ8VRuOk7Dg==
   dependencies:
-    tslib "^2.0.0"
+    tslib "^2.3.0"
 
 "@angular/forms@^11.0.2":
   version "11.0.2"
